@@ -31,6 +31,36 @@ namespace EventHandling
                 this.Vorname = vorname;
                 this.Age = age;
             }
+
+            /*
+             * TODO: Remove after testing! 
+             */
+
+            public String getName()
+            {
+                return this.Name;
+            }
+
+            public String getVorname()
+            {
+                return this.Vorname;
+            }
+
+            public int getAge()
+            {
+                return this.Age;
+            }
+        }
+        /*
+         * TODO: Remove after testing! 
+         */
+
+        public void printAll()
+        {
+            foreach(UserModel i in userList)
+            {
+                Console.WriteLine("Name: {0}, Nachname: {1}, Alter: {2}", i.getName(), i.getVorname(), i.getAge());
+            }
         }
 
         //Enum for the States of the Programm
@@ -66,19 +96,29 @@ namespace EventHandling
         {
             String[] split = name.Split(',');
             int age = 0;
-            if (split.Length != 3 || Int32.TryParse(split[2], out age))
+            //Console.WriteLine(split[2]);
+            if (split.Length != 3 || !Int32.TryParse(split[2], out age))
             {
                 //Generate new Error message
                 ErrorEventArgs myArgs = new ErrorEventArgs() { Message = "Your input was wrong, it should have the format 'name, vorname, age" };
+                Program.addErrorEvent();
                 ErrorEvent?.Invoke(this, myArgs);
+                
+                return;
                 //For testing
                 //Console.WriteLine("Something went wrong, try again!");
             }
+            else
+            {
 
-            userList.Add(new UserModel(split[0], split[1], age));
-            //Genrate Event
-            UserEventArgs myArgs1 = new UserEventArgs() { id = userList.Count - 1 };
-            NewUserEvent?.Invoke(this, myArgs1);
+                userList.Add(new UserModel(split[0], split[1], age));
+                //Genrate Event
+                UserEventArgs myArgs1 = new UserEventArgs() { id = userList.Count - 1 };
+                
+                Program.addNewUserEvent();
+                NewUserEvent?.Invoke(this, myArgs1);
+
+            }
         }
 
 
@@ -96,13 +136,26 @@ namespace EventHandling
             {
                 //Generate new Error message
                 ErrorEventArgs myArgs = new ErrorEventArgs() { Message = "Your input was wrong, it should have the format 'id, name, vorname, age" };
+                Program.addErrorEvent();
                 ErrorEvent?.Invoke(this, myArgs);
+                
+
+                return;
                 //Console.WriteLine("Something went wrong, try again!");
             }
-            userList.Insert(id, new UserModel(split[1], split[2], age));
-            //Generate Event
-            UserEventArgs myArgs1 = new UserEventArgs() { id = userList.Count - 1 };
-            UserEditedEvent?.Invoke(this, myArgs1);
+            else
+            {
+                //Remove the contact 
+                userList.RemoveAt(id);
+                //Add a new one at the same spot
+                userList.Insert(id, new UserModel(split[1], split[2], age));
+
+                //Generate Event
+                UserEventArgs myArgs1 = new UserEventArgs() { id = id };
+                Program.addNewUserEditedEvent();
+                UserEditedEvent?.Invoke(this, myArgs1);
+                
+            }
         }
 
 
