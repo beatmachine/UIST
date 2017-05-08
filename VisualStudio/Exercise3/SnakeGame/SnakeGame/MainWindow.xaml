@@ -21,9 +21,9 @@
         </Grid.ColumnDefinitions>
         <Grid Grid.Row="1" Grid.Column="1">
             <Rectangle Name="REC1" Fill="Green" />
-            <local:GameView x:Name="PlayGameView">
+            <local:GameView x:Name="PlayBoardView">
             </local:GameView>
-            <local:GameView x:Name="SnakeGameView">
+            <local:GameView x:Name="SnakeView">
             </local:GameView>
         </Grid>
         <local:Statistics x:Name="StatisticsView" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"/>
