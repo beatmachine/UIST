@@ -15,7 +15,8 @@ namespace Snakes.ViewModel
         #region Attributes
         public event EventHandler<NewFrameEventArgs> NewFrameEventHandler;
         private Thread gameThread;
-
+        private ICommand _play;
+        private ICommand _stop;
         public bool IsRunning
         {
             set
@@ -35,6 +36,39 @@ namespace Snakes.ViewModel
         #endregion
 
         #region Commands
+        
+        //Start the Game
+        public ICommand Play
+        {
+            get
+            {
+                if(_play == null)
+                {
+                    _play = new RelayCommand(
+                        param => this.setPlay(true));
+                }
+                return _play;
+            }
+        }
+        //Stop the Game
+        public ICommand Stop
+        {
+            get
+            {
+                if(_stop == null)
+                {
+                    _stop = new RelayCommand(
+                        param => this.setPlay(false));
+
+                }
+                return _stop;
+            }
+        }
+        private void setPlay(Boolean play)
+        {
+            this.IsRunning = play;
+        }
+ 
         //ToDo: Include the commands for play and pause
         #endregion
 
