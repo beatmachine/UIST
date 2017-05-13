@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Snakes.View"
              mc:Ignorable="d" 
+             
              d:DesignHeight="50" d:DesignWidth="500">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -17,7 +18,7 @@
         </Grid.RowDefinitions>
         <Label Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment ="Center">Lives</Label>
         <Label Grid.Column="1" Grid.Row="0"  HorizontalAlignment="Center" VerticalAlignment ="Center">Points</Label>
-        <Label Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment ="Center"/> <!--Todo: add DataBinding to "Lives" for the Content-->
-        <Label Grid.Column="1" Grid.Row="1"  HorizontalAlignment="Center" VerticalAlignment ="Center"/> <!-- Todo: add DataBinding to "Length" for the Content-->
+        <Label Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment ="Center" Content="{Binding Lives}"/> <!--Todo: add DataBinding to "Lives" for the Content-->
+        <Label Grid.Column="1" Grid.Row="1"  HorizontalAlignment="Center" VerticalAlignment ="Center" Content="{Binding Points}"/> <!-- Todo: add DataBinding to "Length" for the Content-->
     </Grid>
 </UserControl>

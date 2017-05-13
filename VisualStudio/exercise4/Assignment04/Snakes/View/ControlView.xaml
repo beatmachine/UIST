@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Snakes.View"
              mc:Ignorable="d" 
+             
              d:DesignHeight="100" d:DesignWidth="500">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -19,10 +20,10 @@
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
 
-        <Button Grid.Column="2" Grid.Row="0">Up</Button> <!--Todo: add DataBinding to "DirectionUp" for the Command-->
-        <Button Grid.Column="2" Grid.Row="1">Down</Button> <!--Todo: add DataBinding to "DirectionDown" for the Command-->
-        <Button Grid.Column="1" Grid.Row="1">Left</Button> <!--Todo: add DataBinding to "DirectionLeft" for the Command-->
-        <Button Grid.Column="3" Grid.Row="1">Right</Button> <!--Todo: add DataBinding to "DirectionRight" for the Command-->
+        <Button Grid.Column="2" Grid.Row="0" Command="{Binding Path=DirectionUP}">Up</Button> <!--Todo: add DataBinding to "DirectionUp" for the Command-->
+        <Button Grid.Column="2" Grid.Row="1" Command="{Binding Path=DirectionDown}">Down</Button> <!--Todo: add DataBinding to "DirectionDown" for the Command-->
+        <Button Grid.Column="1" Grid.Row="1" Command="{Binding Path=DirectionLeft}">Left</Button> <!--Todo: add DataBinding to "DirectionLeft" for the Command-->
+        <Button Grid.Column="3" Grid.Row="1" Command="{Binding Path=DirectionRight}">Right</Button> <!--Todo: add DataBinding to "DirectionRight" for the Command-->
         <Button Grid.Column ="0" Margin="10,10,10,10" Name="Start" Command="{Binding Path=Play}">Play</Button> <!--Todo: add DataBinding to "Play" for the Command-->
         <Button Grid.Column ="4" Margin="10,10,10,10" Name="Pause" Command="{Binding Path=Stop}">Stop</Button> <!--Todo: add DataBinding to "Pause" for the Command-->
         <Button Grid.Column ="4" Grid.Row="1" Margin="10,10,10,10" Name="TwoPlayers" Click="PlayerMode" Content="2 Players"/>

@@ -24,6 +24,7 @@
                 <view:GameView x:Name="PlayBoardView"/>
                 <view:GameView x:Name="SnakeView"/>
                 <view:GameView x:Name="SnakeView2"/>
+                <view:GameView x:Name="SnakeView3"/>
         </Grid>
         <view:Statistics x:Name="StatisticsView" Grid.Row ="0" Grid.Column="0" Grid.ColumnSpan ="3"/>
         <view:Statistics2Players x:Name="StatisticsView2Players" Grid.Row ="0" Grid.Column="0" Grid.ColumnSpan ="3" Visibility="Hidden"/>

@@ -16,43 +16,160 @@ namespace Snakes.ViewModel
     {
         #region Attributes
         //float for the amount of lives
-        private float Lives = 0;
-        //float for the amount of cells
-        private float Cells = 0;
-        //Enum for the Directions
-        private enum Direction
+        public int Lives
         {
-            LEFT, RIGHT, UP, DOWN
+            set
+            {
+                if (Model.Lives != value)
+                {
+                    Model.Lives = value;
+                    OnPropertyChanged("Lives");
+
+                }
+            }
+            get { return Model.Lives; }
         }
-        private int[] Position = new int[2];
+
+        //float for the amount of cells
+        public ObservableCollection<bool> Cells
+        {
+            set
+            {
+                if(Model.Cells != value)
+                {
+                    Model.Cells = value;
+                    OnPropertyChanged("Cells");
+                }
+            }
+            get { return Model.Cells; }
+        }
+        //Enum for the Directions
+        private Direction Direction
+        {
+            set
+            {
+                if(Model.Direction != value)
+                {
+                    Model.Direction = value;
+                    OnPropertyChanged("Direction");
+                }
+            }
+            get { return Model.Direction; }
+        }
+
+        public Tuple<int, int> Position {
+            set
+            {
+                if(Model.Position != value)
+                {
+                    Model.Position = value;
+                    OnPropertyChanged("Position");
+                }
+               
+            }
+            get { return Model.Position; }
+        }
+
+        public int Length {
+            set
+            {
+                if(Model.Length != value)
+                {
+                    Model.Length = value;
+                    OnPropertyChanged("Length");
+                    
+                }
+            }
+            get { return Model.Length; }
+        }
 
         // ToDo: Include attributes named Direction, Position, Length, Cells, Lives. 
         // ToDo: Link them to the model and communicate if they are changed via OnPorpertyChanged
         #endregion
 
         #region Commands
+        /*
+        * The I Command for the Direction to the UP 
+        */
         private ICommand _directionUP;
         public ICommand DirectionUP
         {
             get
             {
-                _directionUP = new RelayCommand(
-                    param => )
+                if(_directionUP == null)
+                {
+                    _directionUP = new RelayCommand(param => setDirection(Direction.up));
+                }
+                return _directionUP;
             }
         }
+        /*
+         * The I Command for the Direction to the Down 
+         */
         private ICommand _directionDown;
+        public ICommand DirectionDown
+        {
+            get
+            {
+                if(_directionDown == null)
+                {
+                    _directionDown = new RelayCommand(param => setDirection(Direction.down));
+
+                }
+                return _directionDown;
+            }
+
+        }
+        /*
+         * The I Command for the Direction to the Left 
+         */
         private ICommand _directionLeft;
+        public ICommand DirectionLeft
+        {
+            get
+            {
+                if(_directionLeft == null)
+                {
+                    _directionLeft = new RelayCommand(param => setDirection(Direction.left));
+                }
+                return _directionLeft;
+            }
+        }
+        /*
+         * The I Command for the Direction to the Right 
+         */
         private ICommand _directionRight;
+        public ICommand DirectionRight
+        {
+            get
+            {
+                if (_directionRight == null)
+                {
+                    _directionRight = new RelayCommand(param => setDirection(Direction.right));
+                }
+                return _directionRight;
+            }
+        }
+
+        
+
         // ToDo: Include commands named DirectionUp, DirectionDown, DirectionLeft, DirectionRight
         #endregion
-
+        /*
+         * Method for Changing the Direction 
+         */
         public void setDirection(Enum direction)
         {
-            switch (Direction)
+            switch (direction)
             {
-                case Direction.RIGHT:
-                    
-
+                case Direction.right: Model.ChangeDirection(Snakes.Model.Direction.right);
+                    break;
+                case Direction.left: Model.ChangeDirection(Snakes.Model.Direction.left);
+                    break;
+                case Direction.up: Model.ChangeDirection(Snakes.Model.Direction.up);
+                    break;
+                case Direction.down: Model.ChangeDirection(Snakes.Model.Direction.down);
+                    break;
             }
         }
         public void Move()
@@ -73,5 +190,6 @@ namespace Snakes.ViewModel
         {
           
         }
+       
     }
 }
