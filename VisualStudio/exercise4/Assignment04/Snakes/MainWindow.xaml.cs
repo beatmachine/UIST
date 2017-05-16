@@ -23,6 +23,9 @@ namespace Snakes
         private GameLogicViewModel gl;
         private int playerCount = 1;
 
+        private SoundPlayer collectSound = new SoundPlayer(Snakes.Resources.ding);
+        private SoundPlayer crashSound = new SoundPlayer(Snakes.Resources.chord);
+
         public MainWindow()
         {
             InitializeComponent();
@@ -181,32 +184,21 @@ namespace Snakes
             try
             {
                 PropertyChangedEventArgs args2 = (PropertyChangedEventArgs)args;
-
-                
+    
                 if (_svm.Lives > 0 && _svm2.Lives > 0)
                 {
-                    SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\ding.wav");
-                    simpleSound.Play();
+                    collectSound.Play();
                     return;
                 }
 
-
-
-
                 if (_svm.Lives == 0 || _svm2.Lives == 0)
                 {
-
-                    SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\chord.wav");
-                    simpleSound.Play();
-
+                    crashSound.Play();
                     gl.IsRunning = false;
                     //_svm.Reset();
                     //_svm2.Reset();
                     //_pbvm.Reset();
-
                 }
-
-
             }
             catch (Exception)
             {

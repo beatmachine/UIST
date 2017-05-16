@@ -2,9 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\VisualStudio",
+    "\\VisualStudio\\Excersie2",
+    "\\VisualStudio\\Excersie2\\EventHandling",
     "\\VisualStudio\\Exercise1",
-    "\\VisualStudio\\Exercise1\\CSharpChatBot"
+    "\\VisualStudio\\Exercise1\\CSharpChatBot",
+    "\\VisualStudio\\Exercise3",
+    "\\VisualStudio\\Exercise3\\SnakeGame"
   ],
-  "SelectedNode": "\\VisualStudio\\Exercise1\\CSharpChatBot\\CSharpChatBot.sln",
+  "SelectedNode": "\\VisualStudio\\Exercise3\\SnakeGame\\SnakeGame.sln",
   "PreviewInSolutionExplorer": false
 }
