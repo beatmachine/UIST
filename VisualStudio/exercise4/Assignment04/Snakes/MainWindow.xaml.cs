@@ -124,9 +124,7 @@ namespace Snakes
             SnakeView.referenceBrush = Brushes.Chocolate;
             SnakeView.Init();
             //Now for the Second one
-            SnakeView3.DataContext = _svm2;
-            SnakeView3.referenceBrush = Brushes.Chocolate;
-            SnakeView3.Init();
+            
             //ToDo: Adjust for Two Players
 
         }
@@ -135,6 +133,11 @@ namespace Snakes
         {
             if (e.numPlayers == 1)
             {
+
+                if (playerCount == 2)
+                {
+                    SnakeView3.Visibility = Visibility.Hidden;
+                }
                 playerCount = 1;
                 SnakeView2.Visibility = Visibility.Hidden;
                 StatisticsView2Players.Visibility = Visibility.Hidden;
@@ -142,6 +145,13 @@ namespace Snakes
             }
             else if (e.numPlayers == 2)
             {
+                playerCount = 2;
+
+                SnakeView3.DataContext = _svm2;
+                SnakeView3.referenceBrush = Brushes.Red;
+                SnakeView3.Init();
+
+
                 SnakeView3.Visibility = Visibility.Visible;
                 StatisticsView2Players.Visibility = Visibility.Visible;
                 StatisticsView.Visibility = Visibility.Hidden;
@@ -169,23 +179,31 @@ namespace Snakes
         {
             try
             {
-                PropertyChangedEventArgs args2 = (PropertyChangedEventArgs) args;
+                PropertyChangedEventArgs args2 = (PropertyChangedEventArgs)args;
 
-                if (args2.PropertyName != "Lives") return;
-                if (_svm.Lives != 0) return;
-                if (_svm2.Lives != 0) return;
-                gl.IsRunning = false;
+                if (args2.PropertyName != "Lives")
+                    return;
+                if (_svm.Lives > 0 && _svm2.Lives > 0)
+                    return;
 
-                if (_svm.Lives <= 0)
+
+
+                if (_svm.Lives == 0 || _svm2.Lives == 0)
                 {
-                    _svm.Reset();
+                    gl.IsRunning = false;
+                    //_svm.Reset();
+                    //_svm2.Reset();
+                    //_pbvm.Reset();
+
+
+
+
+
+
+
                 }
-                else
-                {
-                    _svm2.Reset();
-                }
-                //ToDo: Adjust for Two Players
-                _pbvm.Reset();
+
+
             }
             catch (Exception)
             {
