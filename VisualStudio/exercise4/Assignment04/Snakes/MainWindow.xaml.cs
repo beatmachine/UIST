@@ -7,6 +7,7 @@ using System.Windows.Media;
 using Snakes.Model;
 using Snakes.View;
 using Snakes.ViewModel;
+using System.Media;
 
 namespace Snakes
 {
@@ -184,22 +185,25 @@ namespace Snakes
                 if (args2.PropertyName != "Lives")
                     return;
                 if (_svm.Lives > 0 && _svm2.Lives > 0)
+                {
+                    SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\ding.wav");
+                    simpleSound.Play();
                     return;
+                }
+
 
 
 
                 if (_svm.Lives == 0 || _svm2.Lives == 0)
                 {
+
+                    SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\chord.wav");
+                    simpleSound.Play();
+
                     gl.IsRunning = false;
                     //_svm.Reset();
                     //_svm2.Reset();
                     //_pbvm.Reset();
-
-
-
-
-
-
 
                 }
 
