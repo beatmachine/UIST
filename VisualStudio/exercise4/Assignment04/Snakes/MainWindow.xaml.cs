@@ -182,8 +182,7 @@ namespace Snakes
             {
                 PropertyChangedEventArgs args2 = (PropertyChangedEventArgs)args;
 
-                if (args2.PropertyName != "Lives")
-                    return;
+                
                 if (_svm.Lives > 0 && _svm2.Lives > 0)
                 {
                     SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\ding.wav");
