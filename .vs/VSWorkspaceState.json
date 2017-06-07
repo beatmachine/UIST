@@ -2,13 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\VisualStudio",
-    "\\VisualStudio\\Excersie2",
+    "\\VisualStudio\\Excercise6",
+    "\\VisualStudio\\Excercise6\\SmartHome",
+    "\\VisualStudio\\Excercise6\\SmartHome\\SmartHome",
+    "\\VisualStudio\\Excercise6\\SmartHome\\SmartHome\\Model",
+    "\\VisualStudio\\Excercise6\\SmartHome\\SmartHome\\View",
+    "\\VisualStudio\\Excercise6\\SmartHome\\SmartHome\\ViewModel",
     "\\VisualStudio\\Excersie2\\EventHandling",
-    "\\VisualStudio\\Exercise1",
-    "\\VisualStudio\\Exercise1\\CSharpChatBot",
-    "\\VisualStudio\\Exercise3",
-    "\\VisualStudio\\Exercise3\\SnakeGame"
+    "\\VisualStudio\\Exercise1\\CSharpChatBot"
   ],
-  "SelectedNode": "\\VisualStudio\\Exercise3\\SnakeGame\\SnakeGame.sln",
-  "PreviewInSolutionExplorer": false
+  "SelectedNode": "\\VisualStudio\\Excercise6\\SmartHome",
+  "PreviewInSolutionExplorer": true
 }
