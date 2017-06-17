@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/main_layout"
+    tools:context="de.uulm.uist.uistinterface.MainActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/button_main_wohnzimmer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:text="Wohnzimmer"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/button_main_kueche"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Küche"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/button_main_bad"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:text="Bad"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/button_main_buero"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Büro"
+                android:layout_weight="1"/>
+
+
+        </LinearLayout>
+
+
+</LinearLayout>
+

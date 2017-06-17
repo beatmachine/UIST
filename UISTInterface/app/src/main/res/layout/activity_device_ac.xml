@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="de.uulm.uist.uistinterface.DeviceACActivity">
+
+    <Switch
+        android:id="@+id/switchAC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="20dp"
+        android:scaleX="2"
+        android:scaleY="2"
+        />
+
+    <TextView
+        android:id="@+id/ac_tmp_label"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/switchAC"
+        android:text="Temperatur:"
+        android:textSize="30dp"
+        />
+
+    <ImageButton
+        android:id="@+id/ac_tmp_minus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/switchAC"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/ac_tmp_label"
+        android:src="@drawable/ic_chevron_left_black_24dp"/>
+
+    <TextView
+        android:id="@+id/ac_tmp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/switchAC"
+        android:layout_toRightOf="@id/ac_tmp_minus"
+        android:text="20"
+        android:textSize="25dp"
+        />
+
+    <ImageButton
+        android:id="@+id/ac_tmp_plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/switchAC"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/ac_tmp"
+        android:src="@drawable/ic_chevron_right_black_24dp"/>
+
+    <TextView
+        android:id="@+id/ac_speed_label"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ac_tmp_label"
+        android:text="Gebläse:"
+        android:textSize="30dp"
+        />
+
+    <ImageButton
+        android:id="@+id/ac_speed_minus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ac_tmp_label"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/ac_tmp_label"
+        android:src="@drawable/ic_chevron_left_black_24dp"/>
+
+    <TextView
+        android:id="@+id/ac_speed"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ac_tmp_label"
+        android:layout_toRightOf="@id/ac_speed_minus"
+        android:text="1"
+        android:textSize="25dp"
+        />
+
+    <ImageButton
+        android:id="@+id/ac_speed_plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ac_tmp_label"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/ac_speed"
+        android:src="@drawable/ic_chevron_right_black_24dp"/>
+
+
+
+</RelativeLayout>

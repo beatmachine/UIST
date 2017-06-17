@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="de.uulm.uist.uistinterface.DeviceTVActivity">
+
+
+    <Switch
+        android:id="@+id/switchOnOff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="15dp"
+        android:scaleX="2"
+        android:scaleY="2"
+        />
+
+    <TextView
+        android:id="@+id/program_label"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/switchOnOff"
+        android:text="Programm:"
+        android:textSize="30dp"
+        />
+
+    <ImageButton
+        android:id="@+id/program_minus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/switchOnOff"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/program_label"
+        android:src="@drawable/ic_chevron_left_black_24dp"/>
+
+    <TextView
+        android:id="@+id/program"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/switchOnOff"
+        android:layout_toRightOf="@id/program_minus"
+        android:text="1"
+        android:textSize="25dp"
+        />
+
+    <ImageButton
+        android:id="@+id/program_plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/switchOnOff"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/program"
+        android:src="@drawable/ic_chevron_right_black_24dp"/>
+
+    <SearchView
+        android:id="@+id/program_searchbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="150dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/switchOnOff"
+
+        android:layout_toRightOf="@id/program_plus"/>
+
+    <Button
+        android:id="@+id/button_program1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/switchOnOff"
+        android:layout_marginLeft="30dp"
+        android:text="Programm 1"
+        android:layout_toRightOf="@id/program_searchbar"/>
+
+    <Button
+        android:id="@+id/button_program2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/switchOnOff"
+        android:text="Programm 2"
+        android:layout_marginLeft="30dp"
+        android:layout_toRightOf="@id/button_program1"/>
+
+    <Button
+        android:id="@+id/button_program3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/switchOnOff"
+        android:layout_marginLeft="30dp"
+        android:layout_toRightOf="@id/button_program2"
+        android:text="Programm 3"
+        />
+
+    <Button
+        android:id="@+id/button_program4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_program1"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/program_searchbar"
+        android:text="Programm 4"
+        />
+
+    <Button
+        android:id="@+id/button_program5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_program2"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@id/button_program1"
+        android:text="Programm 5"
+        />
+
+    <TextView
+        android:id="@+id/volume_label"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_program5"
+        android:text="Lautstärke:"
+        android:textSize="30dp"
+        />
+
+    <ImageButton
+        android:id="@+id/volume_minus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_program5"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/volume_label"
+        android:src="@drawable/ic_volume_down_black_24dp"/>
+
+    <TextView
+        android:id="@+id/volume"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_program5"
+        android:layout_toRightOf="@id/volume_minus"
+        android:text="1"
+        android:textSize="25dp"
+        />
+
+    <ImageButton
+        android:id="@+id/volume_plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_program5"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/volume"
+        android:src="@drawable/ic_volume_up_black_24dp"/>
+
+    <ImageButton
+        android:id="@+id/volume_off"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_program5"
+        android:layout_marginLeft="25dp"
+        android:layout_toRightOf="@id/volume_plus"
+        android:src="@drawable/ic_volume_off_black_24dp"/>
+
+
+
+
+
+
+</RelativeLayout>
