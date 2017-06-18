@@ -61,10 +61,10 @@
         android:layout_width="39dp"
         android:layout_height="wrap_content"
         android:text="Song: "
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="47dp"
         app:layout_constraintTop_toBottomOf="@+id/hifi_lautstärke"
-        app:layout_constraintRight_toLeftOf="@+id/hifi_previoustrack"
-        android:layout_marginRight="47dp" />
+        android:layout_marginLeft="72dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
     <TextView
         android:id="@+id/track"
@@ -93,8 +93,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/ic_chevron_left_black_24dp"
-        tools:layout_editor_absoluteX="162dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@+id/hifi_quieter" />
+        app:layout_constraintTop_toBottomOf="@+id/hifi_quieter"
+        app:layout_constraintLeft_toRightOf="@+id/hifi_song"
+        android:layout_marginLeft="51dp" />
 
 </android.support.constraint.ConstraintLayout>
