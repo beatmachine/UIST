@@ -21,16 +21,32 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".RoomActivity" android:screenOrientation="landscape" />
+            android:name=".RoomActivity"
+            android:screenOrientation="landscape" />
         <activity
-            android:name=".DeviceTVActivity" android:screenOrientation="landscape" />
+            android:name=".DeviceTVActivity"
+            android:screenOrientation="landscape" />
         <activity
-            android:name=".DeviceFridgeActivity" android:screenOrientation="landscape" />
-        <activity android:name=".DeviceShowerActivity" android:screenOrientation="landscape"/>
-        <activity android:name=".DeviceTelephoneActivity" android:screenOrientation="landscape"/>
-        <activity android:name=".DeviceLightActivity" android:screenOrientation="landscape"/>
-        <activity android:name=".DeviceBlindActivity" android:screenOrientation="landscape"/>
-        <activity android:name=".DeviceACActivity" android:screenOrientation="landscape" />
+            android:name=".DeviceFridgeActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".DeviceShowerActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".DeviceTelephoneActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".DeviceLightActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".DeviceBlindActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".DeviceACActivity"
+            android:screenOrientation="landscape" />
+        <activity android:name=".DeviceHifiActivity"
+            android:screenOrientation="landscape" />
+
     </application>
 
 </manifest>

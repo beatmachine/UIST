@@ -16,7 +16,7 @@ import android.widget.TextView;
 public class DeviceTVActivity extends Activity {
 
     Switch switchOnOff;
-
+    
     ImageButton programPlus, programMinus;
     ImageButton volumePlus, volumeMinus, volumeOff;
 

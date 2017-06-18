@@ -110,6 +110,23 @@ public class RoomActivity extends AppCompatActivity {
             }
         });
 
+        /**
+         * Set an OnclickListener for the Second Button which will send the Activity to the
+         * DeviceHifiActivity
+         */
+        zwei.setOnClickListener(new View.OnClickListener() {
+            /**
+             * This Method will send the User to the DeviceHifiActivity after Clicking on Hifi
+             * @param v The View where the Click comes from
+             */
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RoomActivity.this, DeviceHifiActivity.class);
+                intent.putExtra("room", room);
+                startActivity(intent);
+            }
+        });
+
         vier.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

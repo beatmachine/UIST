@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Smart Home</string>
+    <string name="loudness">0</string>
+    <string name="song">0</string>
 </resources>
