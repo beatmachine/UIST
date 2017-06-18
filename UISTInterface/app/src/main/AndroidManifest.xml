@@ -46,7 +46,6 @@
             android:screenOrientation="landscape" />
         <activity android:name=".DeviceHifiActivity"
             android:screenOrientation="landscape" />
-
     </application>
 
 </manifest>

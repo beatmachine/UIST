@@ -33,6 +33,8 @@ public class RoomActivity extends AppCompatActivity {
         Intent intent = getIntent();
         room = intent.getStringExtra("room");
 
+        this.setTitle(room);
+
         l = (LinearLayout) findViewById(R.id.room_layout);
         l.setBackgroundColor(Color.BLACK);
 
@@ -110,22 +112,34 @@ public class RoomActivity extends AppCompatActivity {
             }
         });
 
-        /**
-         * Set an OnclickListener for the Second Button which will send the Activity to the
-         * DeviceHifiActivity
-         */
         zwei.setOnClickListener(new View.OnClickListener() {
-            /**
-             * This Method will send the User to the DeviceHifiActivity after Clicking on Hifi
-             * @param v The View where the Click comes from
-             */
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(RoomActivity.this, DeviceHifiActivity.class);
-                intent.putExtra("room", room);
-                startActivity(intent);
+
+                if (room.equals("Wohnzimmer")){
+                    Intent intent = new Intent(RoomActivity.this, DeviceHifiActivity.class);
+                    intent.putExtra("room", room);
+                    startActivity(intent);
+                }
+                /*
+                else if (room.equals("Kueche")){
+                    Intent intent = new Intent(RoomActivity.this, DeviceFridgeActivity.class);
+                    startActivity(intent);
+                }
+                else if (room.equals("Buero")){
+                    Intent intent = new Intent(RoomActivity.this, DeviceShowerActivity.class);
+                    startActivity(intent);
+                }
+                else if (room.equals("Bad")){
+                    Intent intent = new Intent(RoomActivity.this, DeviceTelephoneActivity.class);
+                    startActivity(intent);
+                }
+                */
             }
         });
+
+
+
 
         vier.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -156,7 +170,7 @@ public class RoomActivity extends AppCompatActivity {
 
 
         switch (room){
-            case "Wohnzimmer": this.setTitle("Wohnzimmer");
+            case "Wohnzimmer":
                 eins.setText(wohnzimmerGeraete.get(0));
                 zwei.setText(wohnzimmerGeraete.get(1));
                 drei.setText(wohnzimmerGeraete.get(2));
@@ -165,7 +179,7 @@ public class RoomActivity extends AppCompatActivity {
                 sechs.setText(wohnzimmerGeraete.get(5));
                 break;
 
-            case "Kueche": this.setTitle("Küche");
+            case "Kueche":
                 eins.setText(kuechenGeraete.get(0));
                 zwei.setText(kuechenGeraete.get(1));
                 drei.setText(kuechenGeraete.get(2));
@@ -174,7 +188,7 @@ public class RoomActivity extends AppCompatActivity {
                 sechs.setText(kuechenGeraete.get(5));
                 break;
 
-            case "Buero": this.setTitle("Büro");
+            case "Buero":
                 eins.setText(bueroGeraete.get(0));
                 zwei.setText(bueroGeraete.get(1));
                 drei.setText(bueroGeraete.get(2));
@@ -183,7 +197,7 @@ public class RoomActivity extends AppCompatActivity {
                 sechs.setText(bueroGeraete.get(5));
                 break;
 
-            case "Bad": this.setTitle("Bad");
+            case "Bad":
                 eins.setText(badGeraete.get(0));
                 zwei.setText(badGeraete.get(1));
                 drei.setText(badGeraete.get(2));
