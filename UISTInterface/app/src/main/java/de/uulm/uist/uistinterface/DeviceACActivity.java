@@ -27,7 +27,16 @@ public class DeviceACActivity extends AppCompatActivity {
         Intent intent = getIntent();
         room = intent.getStringExtra("room");
 
-        this.setTitle(room + " / Klimaanlage");
+        if (room.equals("Wohnzimmer")){
+            this.setTitle(room + " / Licht");
+        } else if (room.equals("Kueche")){
+            this.setTitle(room + " / Licht");
+        } else if (room.equals("Buero")){
+            this.setTitle(room + " / Licht");
+        } else if (room.equals("Bad")){
+            this.setTitle(room + " / Licht");
+        }
+
 
         switchOnOff = (Switch) findViewById(R.id.switchAC);
 
