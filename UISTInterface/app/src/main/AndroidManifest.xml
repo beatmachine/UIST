@@ -47,7 +47,10 @@
         <activity
             android:name=".DeviceHifiActivity"
             android:screenOrientation="landscape" />
+<<<<<<< HEAD
         <activity android:name=".DeviceBlurayPlayerActivity"></activity>
+=======
+>>>>>>> 716d074b63a14de0e3ba821dec20bf56303bd914
     </application>
 
 </manifest>

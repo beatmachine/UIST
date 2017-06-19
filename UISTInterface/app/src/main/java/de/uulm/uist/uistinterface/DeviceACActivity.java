@@ -28,13 +28,13 @@ public class DeviceACActivity extends AppCompatActivity {
         room = intent.getStringExtra("room");
 
         if (room.equals("Wohnzimmer")){
-            this.setTitle(room + " / Licht");
+            this.setTitle(room + " / Klimaanlage");
         } else if (room.equals("Kueche")){
-            this.setTitle(room + " / Licht");
+            this.setTitle(room + " / Klimaanlage");
         } else if (room.equals("Buero")){
-            this.setTitle(room + " / Licht");
+            this.setTitle(room + " / Klimaanlage");
         } else if (room.equals("Bad")){
-            this.setTitle(room + " / Licht");
+            this.setTitle(room + " / Klimaanlage");
         }
 
 

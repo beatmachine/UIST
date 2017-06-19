@@ -1,5 +1,6 @@
 package de.uulm.uist.uistinterface;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,6 +15,7 @@ import android.widget.TextView;
  */
 public class DeviceHifiActivity extends AppCompatActivity {
     //region Declaration
+    String room;
     /**
      * Switch for turning the Hifi on
      */
@@ -40,7 +42,14 @@ public class DeviceHifiActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_device_hifi);
-    //region FindComponents
+
+        Intent intent = getIntent();
+        room = intent.getStringExtra("room");
+
+        this.setTitle(room + " / HiFi");
+
+
+        //region FindComponents
 
         /**
          * This code will initialize all Components
@@ -54,9 +63,9 @@ public class DeviceHifiActivity extends AppCompatActivity {
         track = (TextView) findViewById(R.id.track);
         song = (TextView) findViewById(R.id.hifi_song);
         lautstärke = (TextView) findViewById(R.id.hifi_lautstärke);
-    //endregion
+        //endregion
 
-    //region Visibility
+        //region Visibility
         /**
          * Set onoff as false when activity is created, also set text of button
          */
@@ -73,7 +82,7 @@ public class DeviceHifiActivity extends AppCompatActivity {
         track.setVisibility(View.INVISIBLE);
         lautstärke.setVisibility(View.INVISIBLE);
         song.setVisibility(View.INVISIBLE);
-    //endregion
+        //endregion
 
         /**
          * Set a Listener for the onoff Switch Component

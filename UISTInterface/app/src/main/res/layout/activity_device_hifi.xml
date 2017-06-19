@@ -11,8 +11,10 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="32dp"
+        android:scaleX="2"
+        android:scaleY="2"
         app:layout_constraintLeft_toLeftOf="parent" />
 
     <TextView
@@ -22,7 +24,7 @@
         android:text="Lautstärke: "
         app:layout_constraintBaseline_toBaselineOf="@+id/switchHifi"
         app:layout_constraintLeft_toRightOf="@+id/switchHifi"
-        android:layout_marginLeft="16dp" />
+        android:layout_marginLeft="28dp" />
 
     <TextView
         android:id="@+id/loudness"
@@ -63,7 +65,7 @@
         android:text="Song: "
         android:layout_marginTop="47dp"
         app:layout_constraintTop_toBottomOf="@+id/hifi_lautstärke"
-        android:layout_marginLeft="72dp"
+        android:layout_marginLeft="100dp"
         app:layout_constraintLeft_toLeftOf="parent" />
 
     <TextView
@@ -97,5 +99,6 @@
         app:layout_constraintTop_toBottomOf="@+id/hifi_quieter"
         app:layout_constraintLeft_toRightOf="@+id/hifi_song"
         android:layout_marginLeft="51dp" />
+    
 
 </android.support.constraint.ConstraintLayout>
