@@ -13,7 +13,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RoomActivity extends AppCompatActivity {
+    //region Constants
+    private static final String de_uulm_uist_uistinterface_WOHNZIMMER = "Wohnzimmer";
+    private static final String de_uulm_uist_uistinterface_KUECHE = "Kueche";
+    private static final String de_uulm_uist_uistinterface_BUERO = "Buero";
+    private static final String de_uulm_uist_uistinterface_BAD = "Bad";
+    //endregion
 
+    //region Declaration
     Button eins, zwei, drei, vier, fuenf, sechs;
     LinearLayout l;
 
@@ -23,7 +30,7 @@ public class RoomActivity extends AppCompatActivity {
     List<String> bueroGeraete = new ArrayList<>();
 
     String room;
-
+    //endregion
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,24 +93,25 @@ public class RoomActivity extends AppCompatActivity {
         sechs.setBackgroundColor(Color.WHITE);
         sechs.setTextSize(35);
 
+        //region OnClickListener
         eins.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                if (room.equals("Wohnzimmer")){
+                if (room.equals(de_uulm_uist_uistinterface_WOHNZIMMER)){
                     Intent intent = new Intent(RoomActivity.this, DeviceTVActivity.class);
                     intent.putExtra("room", room);
                     startActivity(intent);
                 }
-                else if (room.equals("Kueche")){
+                else if (room.equals(de_uulm_uist_uistinterface_KUECHE)){
                     Intent intent = new Intent(RoomActivity.this, DeviceFridgeActivity.class);
                     startActivity(intent);
                 }
-                else if (room.equals("Buero")){
+                else if (room.equals(de_uulm_uist_uistinterface_BAD)){
                     Intent intent = new Intent(RoomActivity.this, DeviceShowerActivity.class);
                     startActivity(intent);
                 }
-                else if (room.equals("Bad")){
+                else if (room.equals(de_uulm_uist_uistinterface_BUERO)){
                     Intent intent = new Intent(RoomActivity.this, DeviceTelephoneActivity.class);
                     startActivity(intent);
                 }
@@ -112,7 +120,7 @@ public class RoomActivity extends AppCompatActivity {
 
         /**
          * Set an OnclickListener for the Second Button which will send the Activity to the
-         * DeviceHifiActivity
+         * right Activity
          */
         zwei.setOnClickListener(new View.OnClickListener() {
             /**
@@ -121,40 +129,69 @@ public class RoomActivity extends AppCompatActivity {
              */
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(RoomActivity.this, DeviceHifiActivity.class);
-                intent.putExtra("room", room);
-                startActivity(intent);
+                if(room.equals(de_uulm_uist_uistinterface_WOHNZIMMER)) {
+                    Intent intent = new Intent(RoomActivity.this, DeviceHifiActivity.class);
+                    intent.putExtra("room", room);
+                    startActivity(intent);
+                }
             }
         });
+
+        /**
+         * Set an OnClickListener for the third Button which will send the Activity to the right
+         * Activity
+         */
+        drei.setOnClickListener(new View.OnClickListener() {
+            /**
+             * This Method will send the User to the DeviceHifiActivity after Clicking on Hifi
+             * @param v The View where the Click comes from
+             */
+            @Override
+            public void onClick(View v) {
+                if(room.equals(de_uulm_uist_uistinterface_WOHNZIMMER)) {
+                    Intent intent = new Intent(RoomActivity.this, DeviceBlurayPlayerActivity.class);
+                    intent.putExtra("room", room);
+                    startActivity(intent);
+                }
+            }
+        });
+
 
         vier.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(RoomActivity.this, DeviceLightActivity.class);
-                intent.putExtra("room", room);
-                startActivity(intent);
+                if(room.equals(de_uulm_uist_uistinterface_WOHNZIMMER)) {
+                    Intent intent = new Intent(RoomActivity.this, DeviceLightActivity.class);
+                    intent.putExtra("room", room);
+                    startActivity(intent);
+                }
             }
         });
 
         fuenf.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(RoomActivity.this, DeviceACActivity.class);
-                intent.putExtra("room", room);
-                startActivity(intent);
+                if(room.equals(de_uulm_uist_uistinterface_WOHNZIMMER)) {
+                    Intent intent = new Intent(RoomActivity.this, DeviceACActivity.class);
+                    intent.putExtra("room", room);
+                    startActivity(intent);
+                }
             }
         });
 
         sechs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(RoomActivity.this, DeviceBlindActivity.class);
-                intent.putExtra("room", room);
-                startActivity(intent);
+                if(room.equals(de_uulm_uist_uistinterface_WOHNZIMMER)) {
+                    Intent intent = new Intent(RoomActivity.this, DeviceBlindActivity.class);
+                    intent.putExtra("room", room);
+                    startActivity(intent);
+                }
             }
         });
+        //endregion
 
-
+        //region NameSwitch
         switch (room){
             case "Wohnzimmer": this.setTitle("Wohnzimmer");
                 eins.setText(wohnzimmerGeraete.get(0));
@@ -192,7 +229,7 @@ public class RoomActivity extends AppCompatActivity {
                 sechs.setText(badGeraete.get(5));
                 break;
         }
-
+//endregion
 
 
 

@@ -44,9 +44,10 @@
         <activity
             android:name=".DeviceACActivity"
             android:screenOrientation="landscape" />
-        <activity android:name=".DeviceHifiActivity"
+        <activity
+            android:name=".DeviceHifiActivity"
             android:screenOrientation="landscape" />
-
+        <activity android:name=".DeviceBlurayPlayerActivity"></activity>
     </application>
 
 </manifest>

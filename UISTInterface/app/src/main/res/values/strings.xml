@@ -2,4 +2,6 @@
     <string name="app_name">Smart Home</string>
     <string name="loudness">0</string>
     <string name="song">0</string>
+    <string name="bluray_dvdname">DVD Name:</string>
+    <string name="dvd_example">Krabat</string>
 </resources>
