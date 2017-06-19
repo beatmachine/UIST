@@ -1,13 +1,9 @@
 <resources>
     <string name="app_name">Smart Home</string>
-<<<<<<< HEAD
+
     <string name="loudness">0</string>
     <string name="song">0</string>
     <string name="bluray_dvdname">DVD Name:</string>
     <string name="dvd_example">Krabat</string>
 </resources>
-=======
-    <string name="loudness">1</string>
-    <string name="song">1</string>
-</resources>
->>>>>>> 716d074b63a14de0e3ba821dec20bf56303bd914
+
