@@ -107,14 +107,17 @@ public class RoomActivity extends AppCompatActivity {
                 }
                 else if (room.equals(de_uulm_uist_uistinterface_KUECHE)){
                     Intent intent = new Intent(RoomActivity.this, DeviceFridgeActivity.class);
+                    intent.putExtra("room", room);
                     startActivity(intent);
                 }
                 else if (room.equals(de_uulm_uist_uistinterface_BAD)){
                     Intent intent = new Intent(RoomActivity.this, DeviceShowerActivity.class);
+                    intent.putExtra("room", room);
                     startActivity(intent);
                 }
                 else if (room.equals(de_uulm_uist_uistinterface_BUERO)){
                     Intent intent = new Intent(RoomActivity.this, DeviceTelephoneActivity.class);
+                    intent.putExtra("room", room);
                     startActivity(intent);
                 }
             }
@@ -129,13 +132,29 @@ public class RoomActivity extends AppCompatActivity {
         zwei.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
-                if (room.equals(de_uulm_uist_uistinterface_WOHNZIMMER)){
-
+                if(room.equals(de_uulm_uist_uistinterface_WOHNZIMMER)) {
                     Intent intent = new Intent(RoomActivity.this, DeviceHifiActivity.class);
                     intent.putExtra("room", room);
                     startActivity(intent);
+                }
+                else if (room.equals(de_uulm_uist_uistinterface_KUECHE)){
+                    /*
+                    Intent intent = new Intent(RoomActivity.this, DeviceStoveActivity.class);
+                    intent.putExtra("room", room);
+                    startActivity(intent);
+                    */
+                }
+                else if (room.equals(de_uulm_uist_uistinterface_BAD)){
+                    Intent intent = new Intent(RoomActivity.this, DeviceWhirlpoolActivity.class);
+                    intent.putExtra("room", room);
+                    startActivity(intent);
+                }
+                else if (room.equals(de_uulm_uist_uistinterface_BUERO)){
+                    /*
+                    Intent intent = new Intent(RoomActivity.this, DeviceNotizblockActivity.class);
+                    intent.putExtra("room", room);
+                    startActivity(intent);
+                    */
                 }
             }
         });
@@ -158,14 +177,17 @@ public class RoomActivity extends AppCompatActivity {
                 }
                 else if (room.equals(de_uulm_uist_uistinterface_KUECHE)){
                     Intent intent = new Intent(RoomActivity.this, DeviceKochbuchActivity.class);
+                    intent.putExtra("room", room);
                     startActivity(intent);
                 }
                 else if (room.equals(de_uulm_uist_uistinterface_BAD)){
-                    Intent intent = new Intent(RoomActivity.this, DeviceShowerActivity.class);
+                    Intent intent = new Intent(RoomActivity.this, DeviceHairdryerActivity.class);
+                    intent.putExtra("room", room);
                     startActivity(intent);
                 }
                 else if (room.equals(de_uulm_uist_uistinterface_BUERO)){
-                    Intent intent = new Intent(RoomActivity.this, DeviceTelephoneActivity.class);
+                    Intent intent = new Intent(RoomActivity.this, DeviceTVActivity.class);
+                    intent.putExtra("room", room);
                     startActivity(intent);
                 }
 
@@ -177,33 +199,28 @@ public class RoomActivity extends AppCompatActivity {
         vier.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(room.equals(de_uulm_uist_uistinterface_WOHNZIMMER)) {
                     Intent intent = new Intent(RoomActivity.this, DeviceLightActivity.class);
                     intent.putExtra("room", room);
                     startActivity(intent);
-                }
             }
         });
 
         fuenf.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(room.equals(de_uulm_uist_uistinterface_WOHNZIMMER)) {
                     Intent intent = new Intent(RoomActivity.this, DeviceACActivity.class);
                     intent.putExtra("room", room);
                     startActivity(intent);
-                }
             }
         });
 
         sechs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(room.equals(de_uulm_uist_uistinterface_WOHNZIMMER)) {
                     Intent intent = new Intent(RoomActivity.this, DeviceBlindActivity.class);
                     intent.putExtra("room", room);
                     startActivity(intent);
-                }
+
             }
         });
         //endregion

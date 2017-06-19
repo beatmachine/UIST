@@ -29,6 +29,8 @@ public class DeviceBlurayPlayerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_device_bluray_player);
 
+        this.setTitle("Wohnzimmer / BlurayPlayer");
+
         //region Initialization
         play = (ImageButton) findViewById(R.id.bluray_player_play);
         stop = (ImageButton) findViewById(R.id.bluray_player_stop);

@@ -8,6 +8,6 @@ public class DeviceTelephoneActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_telephone);
+        setContentView(R.layout.activity_device_telephone);
     }
 }

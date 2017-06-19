@@ -39,6 +39,8 @@ public class DeviceKochbuchActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_device_kochbuch);
 
+        this.setTitle("Kueche / Kochbuch");
+
         //region Initialization
         kochbuch_links = (ImageButton) findViewById(R.id.kochbuch_device_imagebutton_links);
         kochbuch_rechts= (ImageButton) findViewById(R.id.kochbuch_device_imagebutton_rechts);

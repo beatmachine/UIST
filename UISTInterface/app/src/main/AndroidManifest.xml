@@ -50,7 +50,15 @@
         <activity
             android:name=".DeviceBlurayPlayerActivity"
             android:screenOrientation="landscape" />
-        <activity android:name=".DeviceKochbuchActivity"></activity>
+        <activity
+            android:name=".DeviceKochbuchActivity"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".DeviceWhirlpoolActivity"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".DeviceHairdryerActivity"
+            android:screenOrientation="landscape"/>
     </application>
 
 </manifest>
