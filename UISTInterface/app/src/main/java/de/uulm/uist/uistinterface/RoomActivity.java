@@ -120,27 +120,23 @@ public class RoomActivity extends AppCompatActivity {
             }
         });
 
-<<<<<<< HEAD
+
         /**
          * Set an OnclickListener for the Second Button which will send the Activity to the
          * right Activity
          */
-=======
->>>>>>> 716d074b63a14de0e3ba821dec20bf56303bd914
+
         zwei.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-<<<<<<< HEAD
-                if(room.equals(de_uulm_uist_uistinterface_WOHNZIMMER)) {
-=======
 
-                if (room.equals("Wohnzimmer")){
->>>>>>> 716d074b63a14de0e3ba821dec20bf56303bd914
+
+                if (room.equals(de_uulm_uist_uistinterface_WOHNZIMMER)){
+
                     Intent intent = new Intent(RoomActivity.this, DeviceHifiActivity.class);
                     intent.putExtra("room", room);
                     startActivity(intent);
                 }
-<<<<<<< HEAD
             }
         });
 
@@ -160,28 +156,22 @@ public class RoomActivity extends AppCompatActivity {
                     intent.putExtra("room", room);
                     startActivity(intent);
                 }
-            }
-        });
-=======
-                /*
-                else if (room.equals("Kueche")){
+                else if (room.equals(de_uulm_uist_uistinterface_KUECHE)){
                     Intent intent = new Intent(RoomActivity.this, DeviceFridgeActivity.class);
                     startActivity(intent);
                 }
-                else if (room.equals("Buero")){
+                else if (room.equals(de_uulm_uist_uistinterface_BAD)){
                     Intent intent = new Intent(RoomActivity.this, DeviceShowerActivity.class);
                     startActivity(intent);
                 }
-                else if (room.equals("Bad")){
+                else if (room.equals(de_uulm_uist_uistinterface_BUERO)){
                     Intent intent = new Intent(RoomActivity.this, DeviceTelephoneActivity.class);
                     startActivity(intent);
                 }
-                */
+
             }
         });
 
-
->>>>>>> 716d074b63a14de0e3ba821dec20bf56303bd914
 
 
         vier.setOnClickListener(new View.OnClickListener() {
