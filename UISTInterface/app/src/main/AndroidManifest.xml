@@ -52,13 +52,14 @@
             android:screenOrientation="landscape" />
         <activity
             android:name=".DeviceKochbuchActivity"
-            android:screenOrientation="landscape"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".DeviceWhirlpoolActivity"
-            android:screenOrientation="landscape"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".DeviceHairdryerActivity"
-            android:screenOrientation="landscape"/>
+            android:screenOrientation="landscape" />
+        <activity android:name=".DeviceNotizblockActivity"></activity>
     </application>
 
 </manifest>

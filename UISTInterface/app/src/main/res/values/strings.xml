@@ -4,5 +4,6 @@
     <string name="song">0</string>
     <string name="bluray_dvdname">DVD Name:</string>
     <string name="dvd_example">Krabat</string>
+    <string name="notizblock_speicher">Speichern</string>
 </resources>
 

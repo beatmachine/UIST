@@ -150,11 +150,11 @@ public class RoomActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
                 else if (room.equals(de_uulm_uist_uistinterface_BUERO)){
-                    /*
+
                     Intent intent = new Intent(RoomActivity.this, DeviceNotizblockActivity.class);
                     intent.putExtra("room", room);
                     startActivity(intent);
-                    */
+
                 }
             }
         });
