@@ -181,6 +181,7 @@ public class DeviceStoveActivity extends AppCompatActivity {
         platte1_text.addTextChangedListener(new TextWatcher() {
 
             public void afterTextChanged(Editable s) {
+                //ToDo: the if shit isn´t working..=> DEAD CODE fix this maybe
                 if(s.toString().trim().length()==0){return;}
                 int tmp = checkIfNumber(platte1_text.getText().toString());
 
@@ -208,6 +209,7 @@ public class DeviceStoveActivity extends AppCompatActivity {
         platte2_text.addTextChangedListener(new TextWatcher() {
 
             public void afterTextChanged(Editable s) {
+                //ToDo: the if shit isn´t working..=> DEAD CODE fix this maybe
                 if(s.toString().trim().length()==0){return;}
                 int tmp = checkIfNumber(platte2_text.getText().toString());
                 if(tmp > de_uulm_uist_uisterface_MAXTEMPERATURE){
@@ -234,6 +236,7 @@ public class DeviceStoveActivity extends AppCompatActivity {
         platte3_text.addTextChangedListener(new TextWatcher() {
 
             public void afterTextChanged(Editable s) {
+                //ToDo: the if shit isn´t working..=> DEAD CODE fix this maybe
                 if(s.toString().trim().length()==0){return;}
                 int tmp = checkIfNumber(platte3_text.getText().toString());
 
@@ -262,6 +265,7 @@ public class DeviceStoveActivity extends AppCompatActivity {
         platte4_text.addTextChangedListener(new TextWatcher() {
 
             public void afterTextChanged(Editable s) {
+                //ToDo: the if shit isn´t working..=> DEAD CODE fix this maybe
                 if(s.toString().trim().length()==0){return;}
                 int tmp = checkIfNumber(platte4_text.getText().toString());
                 if(tmp > de_uulm_uist_uisterface_MAXTEMPERATURE){
@@ -427,6 +431,11 @@ public class DeviceStoveActivity extends AppCompatActivity {
         //endregion
     }
 
+    /**
+     * Method to check if a given String is a valid Parsable string for an Integer
+     * @param s the String which should be parsable
+     * @return will return 0 if it isn't parsable else it will return the Integer
+     */
     public int checkIfNumber(String s){
         try {
             int tmp = Integer.parseInt(s);
