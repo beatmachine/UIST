@@ -5,5 +5,7 @@
     <string name="bluray_dvdname">DVD Name:</string>
     <string name="dvd_example">Krabat</string>
     <string name="notizblock_speicher">Speichern</string>
+    <string name="fridge_temperatur">Temperatur</string>
+    <string name="fridge_temperatur_value">0</string>
 </resources>
 
