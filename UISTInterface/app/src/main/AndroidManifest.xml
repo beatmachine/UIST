@@ -59,9 +59,13 @@
         <activity
             android:name=".DeviceHairdryerActivity"
             android:screenOrientation="landscape" />
-        <activiy
+
+        <activity
             android:name=".DeviceNotizblockActivity"
             android:screenOrientation="landscape" />
+
+        <activity android:name=".DeviceStoveActivity"
+            android:screenOrientation="landscape"></activity>
     </application>
 
 </manifest>

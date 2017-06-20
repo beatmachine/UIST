@@ -138,11 +138,10 @@ public class RoomActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
                 else if (room.equals(de_uulm_uist_uistinterface_KUECHE)){
-                    /*
                     Intent intent = new Intent(RoomActivity.this, DeviceStoveActivity.class);
                     intent.putExtra("room", room);
                     startActivity(intent);
-                    */
+
                 }
                 else if (room.equals(de_uulm_uist_uistinterface_BAD)){
                     Intent intent = new Intent(RoomActivity.this, DeviceWhirlpoolActivity.class);

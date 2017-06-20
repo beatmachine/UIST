@@ -7,5 +7,10 @@
     <string name="notizblock_speicher">Speichern</string>
     <string name="fridge_temperatur">Temperatur</string>
     <string name="fridge_temperatur_value">0</string>
+    <string name="stove_temperatur">Temperatur</string>
+    <string name="stove_herd1">Herd 1</string>
+    <string name="stove_herd2">Herd 2</string>
+    <string name="stove_herd3">Herd 3</string>
+    <string name="stove_herd4">Herd 4</string>
 </resources>
 
