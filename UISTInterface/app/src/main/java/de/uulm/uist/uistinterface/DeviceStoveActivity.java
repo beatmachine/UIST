@@ -180,54 +180,66 @@ public class DeviceStoveActivity extends AppCompatActivity {
          */
         platte1_text.addTextChangedListener(new TextWatcher() {
 
-            public void afterTextChanged(Editable s) {
-                //ToDo: the if shit isn´t working..=> DEAD CODE fix this maybe
-                if(s.toString().trim().length()==0){return;}
-                int tmp = checkIfNumber(platte1_text.getText().toString());
-
-                if(tmp > de_uulm_uist_uisterface_MAXTEMPERATURE){
-                    temp1.setText(String.valueOf(de_uulm_uist_uisterface_MAXTEMPERATURE));
-                }
-                if(tmp < de_uulm_uist_uisterface_MINTEMPERATURE){
-                    temp1.setText(String.valueOf(de_uulm_uist_uisterface_MINTEMPERATURE));
-                }
-                if(tmp != de_uulm_uist_uisterface_MAXTEMPERATURE && tmp != de_uulm_uist_uisterface_MINTEMPERATURE){
-                    temp1.setText(String.valueOf(tmp));
-                }
-
-
-            }
+            public void afterTextChanged(Editable e) {}
 
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
-            public void onTextChanged(CharSequence s, int start, int before, int count) {}
+            public void onTextChanged(CharSequence cs, int start, int before, int count) {
+
+                String s = cs.toString();
+
+                boolean tmp = checkIfNumber(s);
+
+                if (tmp) {
+
+                    if ((Integer.parseInt(s) > de_uulm_uist_uisterface_MAXTEMPERATURE)) {
+                        temp1.setText("" + de_uulm_uist_uisterface_MAXTEMPERATURE);
+                        platte1_text.setText("" + de_uulm_uist_uisterface_MAXTEMPERATURE);
+                    }
+                    else if ((Integer.parseInt(s) < de_uulm_uist_uisterface_MINTEMPERATURE)) {
+                        temp1.setText("" + de_uulm_uist_uisterface_MINTEMPERATURE);
+                        platte1_text.setText("" + de_uulm_uist_uisterface_MAXTEMPERATURE);
+                    }
+                    else if ((Integer.parseInt(s) != de_uulm_uist_uisterface_MAXTEMPERATURE &&
+                            (Integer.parseInt(s.toString()) != de_uulm_uist_uisterface_MINTEMPERATURE))) {
+                        temp1.setText("" + Integer.parseInt(s));
+                    }
+                }
+            }
         });
+
 
         /**
          * This will set a Listener for the Platte 2 EditText
          */
         platte2_text.addTextChangedListener(new TextWatcher() {
 
-            public void afterTextChanged(Editable s) {
-                //ToDo: the if shit isn´t working..=> DEAD CODE fix this maybe
-                if(s.toString().trim().length()==0){return;}
-                int tmp = checkIfNumber(platte2_text.getText().toString());
-                if(tmp > de_uulm_uist_uisterface_MAXTEMPERATURE){
-                    temp2.setText(String.valueOf(de_uulm_uist_uisterface_MAXTEMPERATURE));
-                }
-                if(tmp < de_uulm_uist_uisterface_MINTEMPERATURE){
-                    temp2.setText(String.valueOf(de_uulm_uist_uisterface_MINTEMPERATURE));
-                }
-                if(tmp != de_uulm_uist_uisterface_MAXTEMPERATURE && tmp != de_uulm_uist_uisterface_MINTEMPERATURE){
-                    temp2.setText(String.valueOf(tmp));
-                }
-
-
-            }
+            public void afterTextChanged(Editable e) {}
 
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
-            public void onTextChanged(CharSequence s, int start, int before, int count) {}
+            public void onTextChanged(CharSequence cs, int start, int before, int count) {
+
+                String s = cs.toString();
+
+                boolean tmp = checkIfNumber(s);
+
+                if (tmp) {
+
+                    if ((Integer.parseInt(s) > de_uulm_uist_uisterface_MAXTEMPERATURE)) {
+                        temp2.setText("" + de_uulm_uist_uisterface_MAXTEMPERATURE);
+                        platte2_text.setText("" + de_uulm_uist_uisterface_MAXTEMPERATURE);
+                    }
+                    else if ((Integer.parseInt(s) < de_uulm_uist_uisterface_MINTEMPERATURE)) {
+                        temp2.setText("" + de_uulm_uist_uisterface_MINTEMPERATURE);
+                        platte2_text.setText("" + de_uulm_uist_uisterface_MAXTEMPERATURE);
+                    }
+                    else if ((Integer.parseInt(s) != de_uulm_uist_uisterface_MAXTEMPERATURE &&
+                            (Integer.parseInt(s.toString()) != de_uulm_uist_uisterface_MINTEMPERATURE))) {
+                        temp2.setText("" + Integer.parseInt(s));
+                    }
+                }
+            }
         });
 
         /**
@@ -235,27 +247,31 @@ public class DeviceStoveActivity extends AppCompatActivity {
          */
         platte3_text.addTextChangedListener(new TextWatcher() {
 
-            public void afterTextChanged(Editable s) {
-                //ToDo: the if shit isn´t working..=> DEAD CODE fix this maybe
-                if(s.toString().trim().length()==0){return;}
-                int tmp = checkIfNumber(platte3_text.getText().toString());
-
-                if(tmp > de_uulm_uist_uisterface_MAXTEMPERATURE){
-                    temp3.setText(String.valueOf(de_uulm_uist_uisterface_MAXTEMPERATURE));
-                }
-                if(tmp < de_uulm_uist_uisterface_MINTEMPERATURE){
-                    temp3.setText(String.valueOf(de_uulm_uist_uisterface_MINTEMPERATURE));
-                }
-                if(tmp != de_uulm_uist_uisterface_MAXTEMPERATURE && tmp != de_uulm_uist_uisterface_MINTEMPERATURE){
-                    temp3.setText(String.valueOf(tmp));
-                }
-
-            }
+            public void afterTextChanged(Editable e) {}
 
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            public void onTextChanged(CharSequence cs, int start, int before, int count) {
 
+                String s = cs.toString();
+
+                boolean tmp = checkIfNumber(s);
+
+                if (tmp) {
+
+                    if ((Integer.parseInt(s) > de_uulm_uist_uisterface_MAXTEMPERATURE)) {
+                        temp3.setText("" + de_uulm_uist_uisterface_MAXTEMPERATURE);
+                        platte3_text.setText("" + de_uulm_uist_uisterface_MAXTEMPERATURE);
+                    }
+                    else if ((Integer.parseInt(s) < de_uulm_uist_uisterface_MINTEMPERATURE)) {
+                        temp3.setText("" + de_uulm_uist_uisterface_MINTEMPERATURE);
+                        platte3_text.setText("" + de_uulm_uist_uisterface_MAXTEMPERATURE);
+                    }
+                    else if ((Integer.parseInt(s) != de_uulm_uist_uisterface_MAXTEMPERATURE &&
+                            (Integer.parseInt(s.toString()) != de_uulm_uist_uisterface_MINTEMPERATURE))) {
+                        temp3.setText("" + Integer.parseInt(s));
+                    }
+                }
             }
         });
 
@@ -264,26 +280,32 @@ public class DeviceStoveActivity extends AppCompatActivity {
          */
         platte4_text.addTextChangedListener(new TextWatcher() {
 
-            public void afterTextChanged(Editable s) {
-                //ToDo: the if shit isn´t working..=> DEAD CODE fix this maybe
-                if(s.toString().trim().length()==0){return;}
-                int tmp = checkIfNumber(platte4_text.getText().toString());
-                if(tmp > de_uulm_uist_uisterface_MAXTEMPERATURE){
-                    temp4.setText(String.valueOf(de_uulm_uist_uisterface_MAXTEMPERATURE));
-                }
-                if(tmp < de_uulm_uist_uisterface_MINTEMPERATURE){
-                    temp4.setText(String.valueOf(de_uulm_uist_uisterface_MINTEMPERATURE));
-                }
-                if(tmp != de_uulm_uist_uisterface_MAXTEMPERATURE && tmp != de_uulm_uist_uisterface_MINTEMPERATURE){
-                    temp4.setText(String.valueOf(tmp));
-                }
-
-
-            }
+            public void afterTextChanged(Editable e) {}
 
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
-            public void onTextChanged(CharSequence s, int start, int before, int count) {}
+            public void onTextChanged(CharSequence cs, int start, int before, int count) {
+
+                String s = cs.toString();
+
+                boolean tmp = checkIfNumber(s);
+
+                if (tmp) {
+
+                    if ((Integer.parseInt(s) > de_uulm_uist_uisterface_MAXTEMPERATURE)) {
+                        temp4.setText("" + de_uulm_uist_uisterface_MAXTEMPERATURE);
+                        platte4_text.setText("" + de_uulm_uist_uisterface_MAXTEMPERATURE);
+                    }
+                    else if ((Integer.parseInt(s) < de_uulm_uist_uisterface_MINTEMPERATURE)) {
+                        temp4.setText("" + de_uulm_uist_uisterface_MINTEMPERATURE);
+                        platte4_text.setText("" + de_uulm_uist_uisterface_MAXTEMPERATURE);
+                    }
+                    else if ((Integer.parseInt(s) != de_uulm_uist_uisterface_MAXTEMPERATURE &&
+                            (Integer.parseInt(s.toString()) != de_uulm_uist_uisterface_MINTEMPERATURE))) {
+                        temp4.setText("" + Integer.parseInt(s));
+                    }
+                }
+            }
         });
 
         /**
@@ -299,7 +321,7 @@ public class DeviceStoveActivity extends AppCompatActivity {
                 //region TemperateCondition
                 int tmp = Integer.parseInt(platte1_text.getText().toString());
                 if(tmp != de_uulm_uist_uisterface_MINTEMPERATURE){
-                    platte1_text.setText(String.valueOf(tmp-1));
+                    platte1_text.setText(String.valueOf(tmp-5));
                 }
                 //endregion
             }
@@ -318,7 +340,7 @@ public class DeviceStoveActivity extends AppCompatActivity {
                 //region TemperateCondition
                 int tmp = Integer.parseInt(platte1_text.getText().toString());
                 if(tmp != de_uulm_uist_uisterface_MAXTEMPERATURE){
-                    platte1_text.setText(String.valueOf(tmp+1));
+                    platte1_text.setText(String.valueOf(tmp+5));
                 }
                //endregion
             }
@@ -334,7 +356,7 @@ public class DeviceStoveActivity extends AppCompatActivity {
                 //region TemperateCondition
                 int tmp = Integer.parseInt(platte2_text.getText().toString());
                 if(tmp != de_uulm_uist_uisterface_MINTEMPERATURE){
-                    platte2_text.setText(String.valueOf(tmp-1));
+                    platte2_text.setText(String.valueOf(tmp-5));
                 }
                 //endregion
             }
@@ -351,7 +373,7 @@ public class DeviceStoveActivity extends AppCompatActivity {
                 //region TemperateCondition
                 int tmp = Integer.parseInt(platte2_text.getText().toString());
                 if(tmp != de_uulm_uist_uisterface_MAXTEMPERATURE){
-                    platte2_text.setText(String.valueOf(tmp+1));
+                    platte2_text.setText(String.valueOf(tmp+5));
                 }
                 //endregion
             }
@@ -368,7 +390,7 @@ public class DeviceStoveActivity extends AppCompatActivity {
                 //region TemperateCondition
                 int tmp = Integer.parseInt(platte3_text.getText().toString());
                 if(tmp != de_uulm_uist_uisterface_MINTEMPERATURE){
-                    platte3_text.setText(String.valueOf(tmp-1));
+                    platte3_text.setText(String.valueOf(tmp-5));
                 }
                 //endregion
             }
@@ -385,7 +407,7 @@ public class DeviceStoveActivity extends AppCompatActivity {
                 //region TemperateCondition
                 int tmp = Integer.parseInt(platte3_text.getText().toString());
                 if(tmp != de_uulm_uist_uisterface_MAXTEMPERATURE){
-                    platte3_text.setText(String.valueOf(tmp+1));
+                    platte3_text.setText(String.valueOf(tmp+5));
                 }
                 //endregion
             }
@@ -401,7 +423,7 @@ public class DeviceStoveActivity extends AppCompatActivity {
                 //region TemperateCondition
                 int tmp = Integer.parseInt(platte4_text.getText().toString());
                 if(tmp != de_uulm_uist_uisterface_MINTEMPERATURE){
-                    platte4_text.setText(String.valueOf(tmp-1));
+                    platte4_text.setText(String.valueOf(tmp-5));
                 }
                 //endregion
             }
@@ -418,15 +440,11 @@ public class DeviceStoveActivity extends AppCompatActivity {
                 //region TemperateCondition
                 int tmp = Integer.parseInt(platte4_text.getText().toString());
                 if(tmp != de_uulm_uist_uisterface_MAXTEMPERATURE){
-                    platte4_text.setText(String.valueOf(tmp+1));
+                    platte4_text.setText(String.valueOf(tmp+5));
                 }
                 //endregion
             }
         });
-
-
-
-
 
         //endregion
     }
@@ -436,13 +454,13 @@ public class DeviceStoveActivity extends AppCompatActivity {
      * @param s the String which should be parsable
      * @return will return 0 if it isn't parsable else it will return the Integer
      */
-    public int checkIfNumber(String s){
+    public boolean checkIfNumber(String s){
         try {
             int tmp = Integer.parseInt(s);
-                return tmp;
+                return true;
 
         }catch(NumberFormatException e){
-            return 0;
+            return false;
         }
 
     }

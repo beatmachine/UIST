@@ -157,10 +157,12 @@
         android:id="@+id/stove_switch_onoff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
+        android:layout_marginLeft="28dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="16dp"
+        android:scaleX="2"
+        android:scaleY="2"/>
 
     <ImageButton
         android:id="@+id/stove_imagebutton_platte1"
