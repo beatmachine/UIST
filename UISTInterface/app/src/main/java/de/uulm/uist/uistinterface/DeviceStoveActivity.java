@@ -192,11 +192,11 @@ public class DeviceStoveActivity extends AppCompatActivity {
 
                 if (tmp) {
 
-                    if ((Integer.parseInt(s) > de_uulm_uist_uisterface_MAXTEMPERATURE)) {
+                    if ((Integer.parseInt(s) >= de_uulm_uist_uisterface_MAXTEMPERATURE)) {
                         temp1.setText("" + de_uulm_uist_uisterface_MAXTEMPERATURE);
                         platte1_text.setText("" + de_uulm_uist_uisterface_MAXTEMPERATURE);
                     }
-                    else if ((Integer.parseInt(s) < de_uulm_uist_uisterface_MINTEMPERATURE)) {
+                    else if ((Integer.parseInt(s) <= de_uulm_uist_uisterface_MINTEMPERATURE)) {
                         temp1.setText("" + de_uulm_uist_uisterface_MINTEMPERATURE);
                         platte1_text.setText("" + de_uulm_uist_uisterface_MAXTEMPERATURE);
                     }
